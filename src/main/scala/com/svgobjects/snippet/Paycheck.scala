@@ -19,10 +19,8 @@ class Paycheck {
     def process() =
       S.redirectTo("/einstein")
 
-    // set the secret
     "name=secret" #> SHtml.onSubmit(TheSecret.set _) & // set the secret
-      // when the form is submitted vend the einstein SVG
-    "type=submit" #> SHtml.onSubmitUnit(process)
+    "type=submit" #> SHtml.onSubmitUnit(process) // on form submission vend the SVG image
   }
 }
 
