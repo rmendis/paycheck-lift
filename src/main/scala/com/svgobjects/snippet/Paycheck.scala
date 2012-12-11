@@ -14,7 +14,7 @@ object TheSecret extends SessionVar("")
 /**
  * The stateless form
  */
-class Paycheck {
+object Paycheck {
   def render = {
     def process() =
       S.redirectTo("/einstein")
@@ -27,6 +27,6 @@ class Paycheck {
 /**
  * stateless 
  */
-class Einstein {
+object Einstein {
   def secret = "#secret *" #> TheSecret.get
 }
