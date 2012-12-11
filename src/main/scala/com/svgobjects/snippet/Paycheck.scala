@@ -9,7 +9,7 @@ import net.liftweb.http.SessionVar
 /**
  * The secret as a session var
  */
-object TheSecret extends SessionVar("")
+object TheSecret extends SessionVar[String]("")
 
 /**
  * The stateless form
